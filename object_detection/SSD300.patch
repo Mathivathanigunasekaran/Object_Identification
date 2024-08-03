@@ -1,0 +1,11 @@
+--- /home/sgr/PycharmProjects/ssd/model.py
++++ /home/sgr/PycharmProjects/ssd/model.py
+@@ -97,7 +97,7 @@
+                             prior_boxes.append([cx, cy, additional_scale, additional_scale])
+ 
+         prior_boxes = torch.FloatTensor(prior_boxes).to(device)  # (8732, 4)
+-        prior_boxes.clamp_(0, 1)  # (8732, 4); this line has no effect; see Remarks section in tutorial
++        prior_boxes.clamp_(0, 1)  # (8732, 4)
+ 
+         return prior_boxes
+ 
